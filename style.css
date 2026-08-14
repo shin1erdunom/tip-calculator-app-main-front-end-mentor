@@ -1,0 +1,234 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: hsl(186, 14%, 43%);
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 375px;
+}
+header{
+    margin: 30px 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 100%, 100%);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.tips{
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    gap: 10px;
+
+}
+.tip button{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    font-weight: 700;
+}
+.tip input{
+    background-color: hsl(189, 47%, 97%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 22px;
+    font-weight: 700;
+    width: 100%;
+}
+.reset-btn.active{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 800;
+}
+button{
+    border: 0px transparent;
+}
+.last-card{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+input{
+    background-color: hsl(189, 47%, 97%);
+    border: 0px transparent;
+}
+img{
+    color: hsl(172, 67%, 45%);
+}
+.tip-amount, .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.person{
+    color: hsl(186, 14%, 43%);
+    font-size: 12px;
+}
+#bills{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    background-position: 20px 14px;
+    border-radius: 5px;
+}
+#people{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    font-family: "Space Mono", monospace;
+    width: 100%;
+    background-position: 20px 14px;
+    border-radius: 5px;
+}
+#bills:focus, #people:focus, #custom:focus {
+    border: 3px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+#bills:focus, #people:focus, #custom:focus{
+    outline: 0px transparent ;
+}
+#people.disactive:focus, #people.disactive{
+    border: 3px solid rgb(223, 130, 97);
+}
+input:hover{
+    cursor: pointer;
+}
+span{
+    display: none;
+    color: rgb(223, 130, 97);
+}
+.message{
+    display: flex;
+    justify-content: space-between;
+}
+article{
+    display: flex;
+    color: hsl(172, 67%, 45%);
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 22px;
+}
+
+article img{
+    width: 10px;
+    height: 16px;
+}
+.text{
+    line-height: .5;
+}
+.total{
+    margin-bottom: 10px;
+}
+.tip-amount{
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+.tips button:focus, .tips button:hover{
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+.tips button:hover{
+    background-color: hsl(173, 56%, 77%);
+}
+.bill{
+    margin-top: 15px;
+}
+@media(min-width: 768px){
+    main{
+        max-width: 1000px;
+    }
+    .card{
+        flex-direction: row;
+    }
+    .tips{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+    }
+    .last-card{
+        flex-direction: column;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .first{
+        width: 50%;
+    }
+    .total{
+        margin-bottom: 110px;
+    }
+    article{
+        font-size: 23px;
+    }
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.reset-btn{
+    background-color: hsl(183, 92%, 24%);
+    color: hsl(183, 100%, 15%);
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 800;
+}
+.reset-btn.active:hover, .reset-btn.active:focus{
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+.reset-btn.active:hover{
+    background-color: hsl(173, 56%, 77%);
+}
