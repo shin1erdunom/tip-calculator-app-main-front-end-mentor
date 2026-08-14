@@ -12,6 +12,7 @@ body{
     justify-content: center;
     flex-direction: column;
     color: hsl(186, 14%, 43%);
+    min-height: 100vh;
 }
 main{
     display: flex;
@@ -183,7 +184,7 @@ article img{
 }
 @media(min-width: 768px){
     main{
-        max-width: 1000px;
+        max-width: 768px;
     }
     .card{
         flex-direction: row;
